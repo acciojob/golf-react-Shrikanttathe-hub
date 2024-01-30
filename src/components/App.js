@@ -18,13 +18,13 @@ class App extends Component {
 //             renderBall: true
 //         });//imp
 //    }
-    renderBallOrButton() {
-		if (this.state.renderBall) {
-		    return <div className="ball" style={this.state.ballPosition}></div>
-		} else {
-		    return <button onClick={this.buttonClickHandler} >Start</button>
-		}
-    }
+    // renderBallOrButton() {
+	// 	if (this.state.renderBall) {
+	// 	    return <div className="ball" style={this.state.ballPosition}></div>
+	// 	} else {
+	// 	    return <button onClick={this.buttonClickHandler} >Start</button>
+	// 	}
+    // }
 
     // bind ArrowRight keydown event
     componentDidMount() {

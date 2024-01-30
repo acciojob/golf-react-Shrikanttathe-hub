@@ -13,18 +13,18 @@ class App extends Component {
         this.buttonClickHandler = this.buttonClickHandler.bind(this)
     };
 
-//     buttonClickHandler() {
-//         this.setState({
-//             renderBall: true
-//         });//imp
-//    }
-    // renderBallOrButton() {
-	// 	if (this.state.renderBall) {
-	// 	    return <div className="ball" style={this.state.ballPosition}></div>
-	// 	} else {
-	// 	    return <button onClick={this.buttonClickHandler} >Start</button>
-	// 	}
-    // }
+    buttonClickHandler() {
+        this.setState({
+            renderBall: true
+        });//imp
+   }
+    renderBallOrButton() {
+		if (this.state.renderBall) {
+		    return <div className="ball" style={this.state.ballPosition}></div>
+		} else {
+		    return <button onClick={this.buttonClickHandler} >Start</button>
+		}
+    }
 
     // bind ArrowRight keydown event
     componentDidMount() {
@@ -35,7 +35,7 @@ class App extends Component {
         document.removeEventListener("keydown", this.handleArrowRight);
     }
 
-    handleArrowRight = (event) => {
+    handleArrowRight=(event)=>{
         if (event.key === "ArrowRight") {
             this.setState((prevState) => ({
                 posi: prevState.posi + 5,
@@ -44,19 +44,20 @@ class App extends Component {
         }
     };
 
-    buttonClickHandler() {
-        this.setState({
-            renderBall: true
-        });//
-    }
+    // buttonClickHandler() {
+    //     this.setState({
+    //         renderBall: true
+    //     });//
+    // }
 
-    renderBallOrButton() {
-        if (this.state.renderBall) {
-            return <div className="ball" style={this.state.ballPosition}></div>
-        } else {
-            return <button onClick={this.buttonClickHandler}>Start</button>
-        }
-    }
+    // renderBallOrButton() {
+    //     if (this.state.renderBall) {
+    //         return <div className="ball" style={this.state.ballPosition}></div>
+    //     } else {
+    //         return <button onClick={this.buttonClickHandler}>Start</button>
+    //     }
+    // }
+    
     render() {
         return (
             <div className="playground">

@@ -47,7 +47,7 @@ class App extends Component {
     buttonClickHandler() {
         this.setState({
             renderBall: true
-        });
+        });//
     }
 
     renderBallOrButton() {
